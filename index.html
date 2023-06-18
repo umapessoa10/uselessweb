@@ -1,0 +1,300 @@
+<html>
+<head>
+<title>Useless web</title>
+<style id="style">
+    body {
+      font-family: 'Trebuchet MS';
+      background-color: white;
+      transition: 0.3s ease;
+    }
+
+
+    .title {
+      font-size: 70px;
+      color: lightgray;
+      text-shadow: 2px 2px 3px #4f4f4f;
+    }
+    
+
+    .square {
+      position: absolute;
+      width: 55%;
+      text-align: center;
+      background: transparent;
+      left: 20%;
+      border-radius: 10px;
+    }
+    
+    .thebtn {
+      background-color: forestgreen;
+      border: 3px solid green;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 40px;
+      text-align: center;
+    }
+    
+    .thebtn:hover {
+      background-color: green;
+      color: white;
+      transform: scale(1.2);
+      border: 3px solid lightgreen;
+    }
+
+    .nopadding {
+      margin-top: 10px; margin-bottom: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      z-index: 12398193;
+      background-color: limegreen;
+      width: 100%;
+      text-align: center;
+      height: 150px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: 5px solid black;
+      transition: 0.3s ease;
+      padding-top: 10px;
+    }
+
+    .footer:hover {
+      border-top: 5px solid forestgreen;
+    }
+
+    #mode{
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      cursor: pointer;
+      border: 2px solid darkgray;
+      padding: 10px;
+    }
+
+    .mode1 {
+      width: 90%;
+      height: 90%;
+    }
+</style>
+</head>
+<body id="body">
+  <div class="square">
+<h1 class="title" style="color: limegreen;">Take me</h1><h1 class="title" style="color: forestgreen;" id="toa">To a</h1><h1 class="title" style="color: darkgreen;">Useless Website</h1>
+<button class="thebtn nopadding" onclick='theuselessweb()'>  <h1 class="nopadding title"> Please</h1></button>
+</div>
+<button id="mode" onclick="changeMode()">
+  <img id="modeImage" class="mode1" src="sun.png">
+</button>
+<div class="footer">
+  <a class="link" href="#">Mais sobre os links</a>
+  <p>Uma recriação da <a class="link" href="www.theuselessweb.com">The Useless web</a> por motivos de aprendizagem</p>
+</div>
+
+
+<script>
+    let first = 0;
+
+    const links = ['trypap.com/', 'theuselessweb.com/', 'drawing.garden/', 'sliding.toys/klotski/easy-street/', 'www.rrrgggbbb.com/', 'www.binarypiano.com', 'www.mondrianandme.com', 'www.cursoreffects.com', 'www.floatingqrcode.com', 'www.checkbox.toys/scale/', 'www.corndog.io', 'www.heeeeeeeey.com', 'www.cant-not-tweet-this.com', 'onesquareminesweeper.com', 'www.staggeringbeauty.com', 'www.burymewithmymoney.com', 'www.eelslap.com', 'www.movenowthinklater.com', 'www.smashthewalls.com', 'www.endless.horse', 'www.koalastothemax.com', '', '', '', '', '', '', '', '', '', '']; //links, do NOT add the https://
+
+    function theuselessweb() {
+      if (first === 0) { //check if it is the first time clicking the buttons
+        first = 1; //make this if never run again
+        document.getElementById("toa").innerHTML = "To another";
+      }
+
+      let linkredirect = Math.floor(Math.random() * links.length);
+      window.open(`https://${links[linkredirect]}`, "_blank");
+    }
+
+
+function changeMode() {
+  var body = document.body;
+  var styleElement = document.getElementById("style");
+  var backgroundColor = window.getComputedStyle(body).backgroundColor;
+  console.log(backgroundColor);
+  var image = document.getElementById("modeImage");
+  
+  if (backgroundColor === "rgb(255, 255, 255)") {
+    image.src = "moon.png";
+    styleElement.innerHTML = `
+      body {
+        font-family: 'Trebuchet MS';
+        background-color: #303030;
+      }
+      
+      .title {
+        font-size: 70px;
+        color: #808080;
+        text-shadow: 2px 2px 3px #1a1a1a;
+      }
+      
+      .square {
+        position: absolute;
+        width: 55%;
+        text-align: center;
+        background: transparent;
+        left: 20%;
+        border-radius: 10px;
+      }
+      
+      .thebtn {
+        background-color: #006400;
+        border: 3px solid #003300;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-size: 40px;
+        text-align: center;
+      }
+      
+      .thebtn:hover {
+        background-color: #003300;
+        color: white;
+        transform: scale(1.2);
+        border: 3px solid #004d00;
+      }
+      
+      .nopadding {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .footer {
+        position: fixed;
+        z-index: 12398193;
+        background-color: #228b22;
+        width: 100%;
+        text-align: center;
+        height: 150px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 5px solid black;
+        transition: 0.3s ease;
+        padding-top: 10px;
+      }
+      
+      .footer:hover {
+        border-top: 5px solid #006400;
+      }
+
+
+      #mode{
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        color: white;
+        text-align: center;
+        border-radius: 15px;
+        cursor: pointer;
+        border: 2px solid darkgray;
+        padding: 10px;
+      }
+
+    .mode1 {
+      width: 90%;
+      height: 90%;
+    }
+    `;
+
+    console.log("Clear!");
+  } else {
+    image.src = "sun.png";
+    styleElement.innerHTML = `
+      body {
+        font-family: 'Trebuchet MS';
+        background-color: white;
+      }
+      
+      .title {
+        font-size: 70px;
+        color: lightgray;
+        text-shadow: 2px 2px 3px #4f4f4f;
+      }
+      
+      .square {
+        position: absolute;
+        width: 55%;
+        text-align: center;
+        background: transparent;
+        left: 20%;
+        border-radius: 10px;
+      }
+      
+      .thebtn {
+        background-color: forestgreen;
+        border: 3px solid green;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-size: 40px;
+        text-align: center;
+      }
+      
+      .thebtn:hover {
+        background-color: green;
+        color: white;
+        transform: scale(1.2);
+        border: 3px solid lightgreen;
+      }
+      
+      .nopadding {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .footer {
+        position: fixed;
+        z-index: 12398193;
+        background-color: limegreen;
+        width: 100%;
+        text-align: center;
+        height: 150px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top: 5px solid black;
+        transition: 0.3s ease;
+        padding-top: 10px;
+      }
+      
+      .footer:hover {
+        border-top: 5px solid forestgreen;
+      }
+
+    #mode{
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      color: white;
+      text-align: center;
+      border-radius: 15px;
+      cursor: pointer;
+      border: 2px solid darkgray;
+      padding: 10px;
+    }
+
+
+    .mode1 {
+      width: 90%;
+      height: 90%;
+    }
+    `;
+
+    console.log("Not clear!");
+  }
+}
+
+
+
+
+
+</script>
+</body>
+</html>

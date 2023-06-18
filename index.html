@@ -81,9 +81,29 @@
       width: 90%;
       height: 90%;
     }
+    
+    .a {
+        background: transparent;
+        border: none;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    #sites {
+        background-color: lightgreen;
+        border: 5px solid green;
+        border-radius: 10px;
+        position: fixed;
+        z-index: 123123123;
+        width: 500px;
+        height: 500px;
+        display: none; /* Make it start off hidden*/
+    }
 </style>
 </head>
 <body id="body">
+    <div id="sites"><p>oi</p></div>
   <div class="square">
 <h1 class="title" style="color: limegreen;">Take me</h1><h1 class="title" style="color: forestgreen;" id="toa">To a</h1><h1 class="title" style="color: darkgreen;">Useless Website</h1>
 <button class="thebtn nopadding" onclick='theuselessweb()'>  <h1 class="nopadding title"> Please</h1></button>
@@ -92,8 +112,8 @@
   <img id="modeImage" class="mode1" src="sun.png">
 </button>
 <div class="footer">
-  <a class="link" href="#">Mais sobre os links</a>
-  <p>Uma recriação da <a class="link" href="www.theuselessweb.com">The Useless web</a> por motivos de aprendizagem</p>
+  <button class="a" onclick="openElement('sites')">Mais sobre os links</button>
+  <p>Uma recriação da <a class="link" href="www.theuselessweb.com">The Useless web</a> por motivos de aprendizagem, todos os websites são feitos para eles, todos os créditos para eles!</p>
 </div>
 
 
@@ -203,7 +223,7 @@ function changeMode() {
     }
     `;
 
-    console.log("Clear!");
+    console.log("Dark!");
   } else {
     image.src = "sun.png";
     styleElement.innerHTML = `
@@ -287,7 +307,7 @@ function changeMode() {
     }
     `;
 
-    console.log("Not clear!");
+    console.log("Clear!");
   }
 }
 
